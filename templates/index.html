@@ -9,14 +9,35 @@
   <link rel="stylesheet" href={% static 'style.css'%}
 </head>
 <body>
-  <h1>Adopt A pet</h1>
-  <div class="image-container">
-    <img src={{result2}} alt="random pet" />
+  <div class="navbar">
+    <ul>
+      <li><a href="#Home">Home</a></li>
+      <li><a href="#About">About</a></li>
+      <li><a href="#Contact">Contact</a></li>
+    </ul>
   </div>
-  <div class="btn-container">
-    <button class="btn" id="prev">Prev</button>
-    <button class="btn" id="next">Next</button>
+  <div id="Home">
+    <img src={{result2}} alt="pet" />
   </div>
+  <div id = "About">
+      <h1>Adopt A Pet</h1>
+    <p>
+            We are actively committed to the humane treatment of stray dogs and cats as well as to better keeping conditions for companion and farm animals. We establish and operate sanctuaries worldwide, in which wild animals rescued from abusive captivity find a species-appropriate home. We also provide a variety of services to help the animals in need, including adoption and foster care.
+    </p> 
+  </div>
+  <div id="Contact">
+    <form action="">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name">
+      <br>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email">
+      <br>
+      <label for="message">Message</label>
+      <textarea name="message" id="message" cols="30" rows="10"></textarea>
+      <button>Submit</button>
+    </form>
+
 
 
   
