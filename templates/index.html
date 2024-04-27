@@ -1,12 +1,12 @@
-{% load static %}
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href={% static 'style.css'%}
+  <title>Responsive Layout</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
   <div class="navbar">
@@ -16,34 +16,37 @@
       <li><a href="#Contact">Contact</a></li>
     </ul>
   </div>
-  <div id="Home">
-    <img src={{result2}} alt="pet" />
+  <div class="container">
+    <div id="Home">
+      <div class = "card">
+        <img src="{{ result2 }}" alt="pet" class="responsive-image">
+        <h2>Enrichment Fund</h2>
+        <p>AAP is proud to have an Enrichment Fund which dedicates funding to purchase interactive toys and fun items for our dogs and cats. Each animal adjusts differently to life at the shelter and this program allows the dogs and cats that need distraction to receive extra enrichment.</p>
+        <button>Donate</button>
+      
+    </div>
+    <div id="About">
+      <div class = "card">
+        <h1>Adopt A Pet</h1>
+        <p>We are actively committed to the humane treatment of stray dogs and cats as well as to better keeping conditions for companion and farm animals. We establish and operate sanctuaries worldwide, in which wild animals rescued from abusive captivity find a species-appropriate home. We also provide a variety of services to help the animals in need, including adoption and foster care.
+        </p>
+      </div>
+    </div>
+    <div id="Contact">
+      <h1>Contact</h1>
+      <form action="">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        <button>Submit</button>
+      </form>
+    </div>
   </div>
-  <div id = "About">
-      <h1>Adopt A Pet</h1>
-    <p>
-            We are actively committed to the humane treatment of stray dogs and cats as well as to better keeping conditions for companion and farm animals. We establish and operate sanctuaries worldwide, in which wild animals rescued from abusive captivity find a species-appropriate home. We also provide a variety of services to help the animals in need, including adoption and foster care.
-    </p> 
-  </div>
-  <div id="Contact">
-    <form action="">
-      <label for="name">Name</label>
-      <input type="text" name="name" id="name">
-      <br>
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email">
-      <br>
-      <label for="message">Message</label>
-      <textarea name="message" id="message" cols="30" rows="10"></textarea>
-      <button>Submit</button>
-    </form>
-
-
-
-  
-
-  
-
-
+  <script src="{% static 'script.js' %}"></script>
 </body>
 </html>

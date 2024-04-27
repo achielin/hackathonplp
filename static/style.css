@@ -1,48 +1,115 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar styles */
 .navbar {
-  display: flex;
-  position: fixed;
   background-color: #0c2461;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-
-  
-}
-.navbar ul {
-  display: flex;
-  list-style-type: none;
-}
-.navbar ul li a {
-  text-decoration: none;
-  margin: 0 10px;
-  color: white;
-  font-family: cursive;
-}
-
-.navbar ul li a:hover {
-  color: red;
-}
-
-.navbar.active {
-  background-color: black;
-}
-
-.navbar.active ul li a {
-  color: white;
-}
-
-#About {
-font-size: 20px;
-font-family: sans-serif
-}
-
- #Home {
-  
-  display:flex;
-  align-items:centre;
+  padding: 10px 0;
   justify-content:center;
-  height: 200px;
- }
+  display:flex;
+}
 
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
+.navbar ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Content container */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Pet image */
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+.card{
+  width:100%;
+  height:60%;
+  background-color:white;
+  border-radius:10px;
+  box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+  padding:20px;
+  margin-bottom:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+/* Sections */
+#About, #Contact {
+  margin-top: 40px;
+}
+
+/* Responsive layout */
+/* @media screen and (max-width: 768px) {
+  .content {
+    padding: 10px;
+  }
+} */
+/* Form styles */
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #009dff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: calc(100% - 20px); /* Adjust width for smaller screens */
+  }
+}
 
